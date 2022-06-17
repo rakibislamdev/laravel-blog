@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog</title>
+    <title>bLoG</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
@@ -109,24 +109,15 @@
         <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
-    <section class="text-center">
-        <div class="shadow p-3 mb-5 bg-body rounded">
-            <h1>Our Blog List</h1>
+    <section class="d-flex justify-content-center">
+        <div class="container">
+            <h1>{{ $post->title }}</h1>
+            <small>Date:- {{ $post->date }}</small>
+            <p>{{ $post->description }}</p>
+            <span>Author name: <i>{{ $post->author_name }}</i></span>
         </div>
-        <div class="row mt-5 p-4">
-            @foreach ($posts as $post)
-            <div class="col-md-4">
-                <a href="/posts/{{ $post->id }}" class="text-decoration-none">
-                    <h4 class="fw-bold">{{ $post->title }}</h4>
-                </a>
-                <small>{{ $post->date }}</small>
-                <p>{{ $post->description }}</p>
-                <h5><i>writen by--</i> {{ $post->author_name }}</h5>
-            </div>
-            @endforeach
-        </div>
-    </section>
 
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
