@@ -71,7 +71,7 @@
 
     </section>
 
-    <footer class="bg-dark p-4 text-center">
+    <footer class="bg-dark p-4 text-center fixed-bottom">
         <p class="text-white">&copy; all right reserved by <a class="text-decoration-none"
                 href="https://www.facebook.com/rakibislm.dev"><i>Rakib</i></a></p>
     </footer>

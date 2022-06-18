@@ -79,18 +79,14 @@
                 <label for="description" class="form-label">Description:</label>
                 <textarea class="form-control" name="description" id="description" cols="20" rows="7"></textarea>
             </div>
-            <div class="mb-3">
-                <label for="image" class="form-label">please select a image</label>
-                <input type="file" name="image" class="form-control" id="image">
-            </div>
             <div class="float-end">
                 <a href="/" class="btn btn-secondary">Back</a>
-                <a type="submit" class="btn btn-primary">Post</a>
+                <button type="submit" class="btn btn-primary">Post</button>
             </div>
         </form>
     </section>
 
-    <footer class="bg-dark p-4 text-center">
+    <footer class="bg-dark p-4 text-center sticky-bottom">
         <p class="text-white">&copy; all right reserved by <a class="text-decoration-none"
                 href="https://www.facebook.com/rakibislm.dev"><i>Rakib</i></a></p>
     </footer>

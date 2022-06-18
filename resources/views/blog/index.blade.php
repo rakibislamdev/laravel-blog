@@ -72,7 +72,7 @@
                 </a>
                 <small>{{ $post->date }}</small>
                 <p>{{ $post->description }}</p>
-                <h5><i>writen by--</i> {{ $post->author_name }}</h5>
+                <span><i>writen by--</i> {{ $post->author_name }}</span>
             </div>
             @endforeach
         </div>
