@@ -54,59 +54,10 @@
                         @endauth
                     </div>
                     @endif
-                    {{-- <a href="/" class="px-3 me-2 text-decoration-none">
-                        Home
-                    </a>
-                    <a href="/create" class="px-3 me-2 text-decoration-none">
-                        Create
-                    </a>
-                    <a href="/login" class="px-3 me-2 text-decoration-none">
-                        Login
-                    </a>
-                    <a href="/register" class="px-3 me-2 text-decoration-none">
-                        Register
-                    </a> --}}
                 </div>
-                <!-- Right links -->
-
-                {{-- @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                    <a href="/" class="px-3 me-2 text-decoration-none">
-                        Home
-                    </a>
-                    <a href="/create" class="px-3 me-2 text-decoration-none">
-                        Create
-                    </a>
-                    <a href="{{ url('/dashboard') }}"
-                        class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                    <a href="/" class="px-3 me-2 text-decoration-none">
-                        Home
-                    </a>
-                    <a href="/create" class="px-3 me-2 text-decoration-none">
-                        Create
-                    </a>
-                    <a href="/login" class="px-3 me-2 text-decoration-none">
-                        Login
-                    </a>
-                    <a href="/register" class="px-3 me-2 text-decoration-none">
-                        Register
-                    </a>
-
-                    @if (Route::has('register'))
-                    <a href="{{ route('register') }}"
-                        class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                    @endif
-                    @endauth
-                </div>
-                @endif --}}
-
-
+                <!-- Collapsible wrapper -->
             </div>
-            <!-- Collapsible wrapper -->
-        </div>
-        <!-- Container wrapper -->
+            <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
     <section class="text-center">
@@ -126,6 +77,11 @@
             @endforeach
         </div>
     </section>
+
+    <footer class="bg-dark p-4 text-center">
+        <p class="text-white">&copy; all right reserved by <a class="text-decoration-none"
+                href="https://www.facebook.com/rakibislm.dev"><i>Rakib</i></a></p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
