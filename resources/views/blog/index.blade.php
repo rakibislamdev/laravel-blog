@@ -66,13 +66,13 @@
         </div>
         <div class="row mt-5 p-4">
             @foreach ($posts as $post)
-            <div class="col-md-4">
+            <div class="col-md-4 shadow p-2 mb-3 bg-body rounded">
                 <a href="/posts/{{ $post->id }}" class="text-decoration-none">
                     <h4 class="fw-bold">{{ $post->title }}</h4>
                 </a>
                 <small>{{ $post->date }}</small>
                 <p>{{ $post->description }}</p>
-                <span><i>writen by--</i> {{ $post->author_name }}</span>
+                <p class="text-end"><i>writen by--</i> {{ $post->author_name }}</p>
             </div>
             @endforeach
         </div>

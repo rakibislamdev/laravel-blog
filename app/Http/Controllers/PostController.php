@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -50,6 +51,20 @@ class PostController extends Controller
     public function show(Post $post)
     {
         return view('blog.show', ['post' => $post]);
+    }
+
+    /**
+     * comment store here
+     *
+     */
+    public function comment(Request $request, Post $post)
+    {
+        Comment::create([
+            'comment' =>  $request->comment,
+            'post_id' => $post->id,
+            'user_id' => \auth()->user()->id,
+        ]);
+        return \view('blog.show', ['post' => $post]);
     }
 
     /**

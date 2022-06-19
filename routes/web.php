@@ -32,3 +32,4 @@ Route::get('/', [PostController::class, 'index']);
 Route::get('/create', [PostController::class, 'create'])->middleware('auth');
 Route::post('/store', [PostController::class, 'store']);
 Route::get('/posts/{post}', [PostController::class, 'show']);
+Route::post('/posts/{post}/comment', [PostController::class, 'comment']);
