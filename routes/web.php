@@ -32,4 +32,7 @@ Route::get('/', [PostController::class, 'index']);
 Route::get('/create', [PostController::class, 'create'])->middleware('auth');
 Route::post('/store', [PostController::class, 'store']);
 Route::get('/posts/{post}', [PostController::class, 'show']);
-Route::post('/posts/{post}/comment', [PostController::class, 'comment']);
+Route::post('/post/{post}/comment', [PostController::class, 'comment']);
+Route::get('/post/{post}/like', [PostController::class, 'like'])->name('post.like');
+Route::get('/post/{post}/unlike', [PostController::class, 'unlike'])->name('post.unlike');
+// Route::get('/posts/{post}/comment', [PostController::class, 'showComment']);

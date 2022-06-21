@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Like;
 use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -64,7 +65,33 @@ class PostController extends Controller
             'post_id' => $post->id,
             'user_id' => \auth()->user()->id,
         ]);
-        return \view('blog.show', ['post' => $post]);
+        return \redirect()->back();
+    }
+
+    /**
+     * comment store here
+     *
+     */
+    public function like(Post $post)
+    {
+        if (!$post->likes()->where('user_id', auth()->user()->id)->first()) {
+            like::create([
+                'user_id' => \auth()->user()->id,
+                'post_id' => $post->id
+            ]);
+        }
+        return \redirect()->back();
+    }
+
+    /**
+     * comment store here
+     *
+     */
+    public function unlike(Post $post)
+    {
+        $like = $post->likes()->where('user_id', \auth()->user()->id)->first();
+        $like->delete();
+        return \redirect()->back();
     }
 
     /**
